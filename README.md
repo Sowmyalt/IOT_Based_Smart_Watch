@@ -1,33 +1,57 @@
-# IoT-Based Smart Safety Watch
+# IoT Based Smart Watch 
 
-## 📌 Description
-This project is an IoT-based smart safety watch developed using Arduino Nano.
-When an SOS button is pressed, the device sends an emergency alert with
-location details via a GSM module.
+An Arduino Nano-based wearable IoT device designed for real-time location tracking and cellular communication. This project integrates GPS for precise positioning and GSM for SMS-based alerts, managed by a high-efficiency power regulation system.
 
+## Project Features
+* Real-time GPS Tracking: Retrieves latitude and longitude co-ordinates.
+* GSM Communication: Sends SMS alerts and location links to a predefined mobile number.
+* Efficient Power Management: Utilizes a DC-DC Buck Converter to regulate Lithium-Ion battery output.
+* User Input: Includes a push button for SOS/emergency triggers and a hard switch for power control.
+
+---
+
+## Hardware Components
+
+| Component | Purpose |
+| :--- | :--- |
+| **Arduino Nano** | System Microcontroller |
+| **SIM800L / SIM900A** | GSM Module for Cellular Connectivity |
+| **Neo-6M GPS Module** | Satellite Positioning |
+| **Lithium-Ion Battery** | 7.4V (2S) or 11.1V (3S) Power Source |
+| **DC-DC Buck Converter** | Steps down battery voltage to stable 5V |
+| **Push Button** | SOS Alert / User Trigger |
+| **Key/Slide Switch** | Main Power Toggle |
+
+---
 ## 🧠 Working Principle
 1. The system is powered using a lithium-ion battery with a DC-DC buck converter.
 2. Pressing the SOS button triggers the Arduino Nano.
-3. The GSM module sends an SMS containing a Google Maps location link.
-4. A call is also initiated to the emergency contact.
-5. An LED indicates successful alert triggering.
+3. The GPS Module collects the location coordinates.
+4. The GSM module sends an SMS containing a Google Maps location link.
+5. A call is also initiated to the emergency contact.
+  
 
-## 🧰 Components Used
-- Arduino Nano  
-- GSM Module (SIM800L)  
-- GPS Module (NEO-6M)  
-- Push Button  
-- Lithium-ion Battery  
-- DC-DC Buck Converter  
+---
+## Software Setup
+### Prerequisites
+1.  **Arduino IDE:** Download and install the [Arduino IDE](https://www.arduino.cc/en/software).
+### The project requires the following Arduino libraries:
+1. **SoftwareSerial**: To enable multiple serial communications on digital pins.
 
-## 🚀 Applications
-- Women safety
-- Tourist Safety
-- Emergency alert systems
-- Elderly care monitoring
-- Personal safety devices
+### Implementation Steps
+1. Connect the hardware according to circuit diagram given.
+2. Ensure the GSM module has a valid SIM card with the PIN lock disabled.
+3. Upload the firmware using the Arduino IDE.
+4. Open the Serial Monitor at 9600 baud to view system status.
 
-## 🔮 Future Scope
-- Mobile application integration
-- Cloud-based tracking
-- Health sensor integration
+---
+
+## License
+
+**MIT License**
+
+Copyright (c) 2025 [Sowmyalt]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
